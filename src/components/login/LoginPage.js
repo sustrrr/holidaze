@@ -1,6 +1,6 @@
 import LoginForm from "./LoginForm";
 
-import Footer from "../layout/footer/Footer";
+import Footer from "../layout/Footer";
 import HeadingOne from "../layout/headings/HeadingOne";
 import HeadingTwo from "../layout/headings/HeadingTwo";
 import HeadingImage from "../layout/headings/HeadingImage";

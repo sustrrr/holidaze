@@ -4,8 +4,8 @@ import {
   IoMdCard,
   IoIosChatboxes,
 } from "react-icons/io";
-import Logo from "../../layout/Logo";
-import HeadingTwo from "../../layout/headings/HeadingTwo";
+import Logo from "./Logo";
+import HeadingTwo from "./headings/HeadingTwo";
 
 function Footer() {
   return (

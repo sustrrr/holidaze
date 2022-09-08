@@ -1,6 +1,6 @@
 import BookForm from "./BookForm";
 
-import Footer from "../../layout/footer/Footer";
+import Footer from "../../layout/Footer";
 
 function BookPage() {
   return (

@@ -4,7 +4,7 @@ import DashboardMenu from "./DashboardMenu";
 
 import HeadingImage from "../layout/headings/HeadingImage";
 
-import Footer from "../layout/footer/Footer";
+import Footer from "../layout/Footer";
 
 export default function DashboardPage({ children }) {
   return (

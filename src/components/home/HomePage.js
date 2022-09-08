@@ -1,4 +1,4 @@
-import Footer from "../layout/footer/Footer";
+import Footer from "../layout/Footer";
 import Welcome from "./Welcome";
 import HeadingTwo from "../layout/headings/HeadingTwo";
 

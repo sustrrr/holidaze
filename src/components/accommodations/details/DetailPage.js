@@ -1,6 +1,6 @@
 import Details from "./Details";
 
-import Footer from "../../layout/footer/Footer";
+import Footer from "../../layout/Footer";
 import HeadingTwo from "../../layout/headings/HeadingTwo";
 
 import FeaturedHotel from "../featured/FeaturedHotel";
