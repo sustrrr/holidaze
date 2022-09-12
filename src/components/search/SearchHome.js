@@ -51,13 +51,18 @@ class SearchHome extends Component {
   browseList(e) {
     if (e.code !== "Enter") {
     } else if (e.code === "Enter") {
-      this.props.history.push(`./detail/${this.state.id}`);
-      e.target.value = "";
+      if (this.state.name.length > 0) {
+        this.props.history.push(`./detail/${this.state.id}`);
+        e.target.value = "";
+      } else {
+        this.props.history.push(`./hotels`);
+      }
     }
   }
 
   render() {
     console.log(this.state.selectOptions);
+    const name = this.state.name;
     return (
       <div className="search" props={this.props}>
         <div className="search__input">
@@ -74,9 +79,17 @@ class SearchHome extends Component {
           />
         </div>
         <div className="search__icon">
-          <Link to={`./detail/${this.state.id}`}>
-            <IoMdSearch />
-          </Link>
+          {(() => {
+            if (name.length <= 1) {
+              return <IoMdSearch />;
+            } else if (name.length > 1) {
+              return (
+                <Link to={`./detail/${this.state.id}`}>
+                  <IoMdSearch />
+                </Link>
+              );
+            }
+          })()}
         </div>
       </div>
     );
