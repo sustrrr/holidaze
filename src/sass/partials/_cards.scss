@@ -39,9 +39,9 @@
 .cardbutton {
   background-color: getColour(blue);
   color: rgb(255, 255, 255);
-  padding: 0.8em 2em;
+  padding: 1.2em 1.7em;
   border: none;
-  border-radius: 20em;
+  border-radius: 1em;
 
   @media (max-width: $tablet-width) {
     padding: 0.8em 1em;

@@ -1,7 +1,16 @@
 .detailpage {
-  .item-container {
+  padding-top: 3em;
+
+  h1 {
+    text-align: left;
     @media (max-width: $tabletPRO-width) {
-      padding-top: 4em;
+      text-align: center;
+    }
+  }
+  .item-container {
+    padding-top: 4em;
+    @media (max-width: $tabletPRO-width) {
+      padding-top: 0em;
     }
   }
   .detail {
@@ -50,6 +59,11 @@
 
   &__about {
     margin-bottom: 3em;
+    text-indent: -10px;
+
+    &:first-letter {
+      margin-left: 0.7em;
+    }
   }
 
   &__location {

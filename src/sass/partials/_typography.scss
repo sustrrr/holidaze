@@ -2,6 +2,7 @@
 
 .h1 {
   font-family: $font-heading-one;
+  text-align: center;
 
   h1 {
     font-size: 1em;
@@ -82,10 +83,13 @@ a {
 
 //// navbrand
 .navbrand {
-  border-top: 0.2em solid getColour(accent);
-  border-bottom: 0.2em solid getColour(accent);
-  color: getColour(darkgrey);
-  padding: 0.5em;
+  color: getColour(accent);
+  font-family: $font-heading-two;
+  font-weight: bold;
+  font-size: 1.4em;
+  letter-spacing: 0.1em;
+  padding: 0.5em 1em;
+  /*  padding: 0.5em;*/
   text-transform: uppercase;
 
   &:hover {

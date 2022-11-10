@@ -98,7 +98,7 @@ const Details = (props) => {
         </div>
         <HeadingTwo>About</HeadingTwo>
         <div className="detailabout">
-          <p className="detailabout__about">{pages.description}</p>
+          <p className="detailabout__about">{pages.description.slice(3, -4)}</p>
           <p className="detailabout__location">
             {" "}
             <IoMdPin className="detailabout__icon" />

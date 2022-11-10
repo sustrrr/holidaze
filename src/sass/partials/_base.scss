@@ -33,6 +33,11 @@ body {
 }
 
 .wrapperhome {
+  padding-top: 3em;
+}
+
+/*
+.wrapperhome {
   ///remove this or either use wrapper or container
   @extend .wrapper;
   padding-top: 5.4em;
@@ -40,7 +45,7 @@ body {
   @media (max-width: $tablet-width) {
     padding-top: 4.6em;
   }
-}
+}*/
 
 .container {
   max-width: 100%;
@@ -49,8 +54,8 @@ body {
 }
 
 .item-container {
-  padding-bottom: 9em;
-  padding-top: 9em;
+  padding-bottom: 7em;
+  padding-top: 7em;
 }
 
 .item-container-first {

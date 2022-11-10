@@ -5,9 +5,9 @@
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
-  padding: 15em 20em;
-  outline: 2px solid rgba(255, 255, 255, 0.631);
-  outline-offset: -10px;
+  border-radius: 0em 0em 1em 1em;
+  margin: 0 auto;
+  padding: 15em 15em;
 
   @media (max-width: $tabletPRO-width) {
     padding: 15em 7em;
@@ -26,6 +26,7 @@
     h1 {
       text-align: center;
       font-size: 0.7em;
+      color: rgb(255, 255, 255);
     }
     margin-bottom: 1em;
   }
@@ -58,7 +59,9 @@
 
   &__icon {
     position: relative;
-    left: -1.2em;
+    border-radius: 1em 1em 1em 0em;
+    background: radial-gradient(#000000 2px, #192ae300, #192ae300);
+    color: rgb(255, 217, 0);
     bottom: 0.2em;
     font-size: 2.8em;
     align-self: center;
@@ -68,7 +71,7 @@
     }
 
     a {
-      color: getColour(accent);
+      color: white;
     }
   }
 }

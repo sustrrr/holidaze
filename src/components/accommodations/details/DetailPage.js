@@ -11,6 +11,9 @@ function DetailPage() {
   return (
     <>
       <div className="detailpage">
+        <div className="ribbon">
+          Use code <span>holidaze</span> for 20% on all bookings
+        </div>
         <div className="wrapper">
           <div class="item-container">
             <Details />

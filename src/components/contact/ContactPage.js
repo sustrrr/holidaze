@@ -9,6 +9,9 @@ import ButtonCategories from "../layout/buttons/ButtonCategories";
 function ContactPage() {
   return (
     <div className="contact">
+      <div className="ribbon">
+        Use code <span>holidaze</span> for 20% on all bookings
+      </div>
       <HeadingImage style="contact__image" />
       <div className="wrapper contact">
         <div className="item-container-first flex">

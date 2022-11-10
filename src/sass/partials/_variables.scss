@@ -9,18 +9,26 @@ $mobileXL-width: 540px; ///cards
 $mobile-width: 414px;
 
 $colours: (
-  primary: #f5f5f5, ////navbar
-  secondary: #2F2F2F, //footer, ribbon
+  primary: #e9e9e9,
+  ////navbar
+  secondary: #2f2f2f,
 
-  accent: #c6a800, //logo lines, dot,
-  orange: #FFAE5D, //book now, buttons
+  //footer, ribbon
+  accent: #c6a800,
+  //logo lines, dot,
+  orange: #ffae5d,
 
-  grey: #888888, //icons
-  darkgrey: #3E3E3E, //navtext
-  darkergrey: #454545, //text
+  //book now, buttons
+  grey: #888888,
+  //icons
+  darkgrey: #3e3e3e,
+  //navtext
+  darkergrey: #454545,
 
-  blue: #46555C, //front buttons, contact us
+  //text
+  blue: #46555c,
 
+  //front buttons, contact us
 );
 
 @function getColour($colour) {

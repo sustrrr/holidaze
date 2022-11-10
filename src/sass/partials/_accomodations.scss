@@ -1,62 +1,72 @@
+@mixin search {
+  .search {
+    margin: 0 auto;
+    justify-content: center;
+    width: 60%;
+    @media (max-width: $tabletPRO-width) {
+      width: 80%;
+    }
+    @media (max-width: $tablet-width) {
+      width: 100%;
+    }
+    &__input {
+      font-style: italic;
+      width: 100%;
+      @media (max-width: $tabletPRO-width) {
+        width: 100%;
+      }
+    }
+
+    &__icon {
+      position: relative;
+      left: 0em;
+      bottom: 0.2em;
+      font-size: 2.8em;
+      align-self: center;
+      background: none;
+
+      @media (max-width: $mobile-width) {
+        left: -0.5em;
+      }
+
+      a {
+        color: getColour(accent);
+      }
+    }
+  }
+}
+
 .guesthouse {
+  padding-top: 3em;
   &__image {
     background-image: url(/img/hotels.jpg);
     @include imageheader;
+    border-radius: 0em 0em 2em 2em;
   }
 
-  .search {
-    margin-top: 2em;
-    justify-content: left;
-    &__input {
-      width: 50%;
-      font-style: italic;
-      @media (max-width: $tablet-width) {
-        width: 90%;
-        justify-content: center;
-      }
-    }
-  }
+  @include search;
 }
 
 .hotels {
+  padding-top: 3em;
   &__image {
     background-image: url(/img/contact.jpg);
     @include imageheader;
+    border-radius: 0em 0em 2em 2em;
   }
 
-  .search {
-    margin-top: 2em;
-    justify-content: left;
-    &__input {
-      width: 50%;
-      font-style: italic;
-      @media (max-width: $tablet-width) {
-        width: 90%;
-        justify-content: center;
-      }
-    }
-  }
+  @include search;
 }
 
 .bb {
+  padding-top: 3em;
   &__image {
     background-image: url(/img/bb.jpg);
     @include imageheader;
+    border-radius: 0em 0em 2em 2em;
   }
 
-  .search {
-    margin-top: 2em;
-    justify-content: left;
-
-    &__input {
-      width: 50%;
-      font-style: italic;
-      @media (max-width: $tablet-width) {
-        width: 90%;
-        justify-content: center;
-      }
-    }
-  }
+  @include search;
 }
 
 /////

@@ -10,6 +10,9 @@ function GuesthousePage() {
   return (
     <>
       <div className="guesthouse">
+        <div className="ribbon">
+          Use code <span>holidaze</span> for 20% on all bookings
+        </div>
         <HeadingImage style="guesthouse__image" />
         <div class="wrapper">
           <div className="item-container-first">

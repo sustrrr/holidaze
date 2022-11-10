@@ -12,6 +12,9 @@ function Home() {
   return (
     <>
       <div className="wrapperhome">
+        <div className="ribbon">
+          Use code <span>holidaze</span> for 20% on all bookings
+        </div>
         <Welcome />
         <div className="item-container wrapper">
           <HeadingTwo>Accomodations by type</HeadingTwo>

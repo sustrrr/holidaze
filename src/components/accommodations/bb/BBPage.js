@@ -10,6 +10,9 @@ function BBPage() {
   return (
     <>
       <div className="bb">
+        <div className="ribbon">
+          Use code <span>holidaze</span> for 20% on all bookings
+        </div>
         <HeadingImage style="bb__image" />
         <div class="wrapper">
           <div className="item-container-first">

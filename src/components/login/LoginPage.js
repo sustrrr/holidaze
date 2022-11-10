@@ -9,6 +9,9 @@ export default function LoginPage() {
   return (
     <>
       <div className="contact">
+        <div className="ribbon">
+          Use code <span>holidaze</span> for 20% on all bookings
+        </div>
         <HeadingImage style="contact__image" />
         <div class="wrapper contact">
           <div class="item-container-first flex">

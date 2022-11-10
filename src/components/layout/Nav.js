@@ -64,10 +64,6 @@ function Nav() {
                 Login
               </NavLink>
             )}
-
-            <NavLink activeClassName="active" className="searchicon" to="/">
-              <IoMdSearch />
-            </NavLink>
           </div>
         </div>
 
@@ -110,13 +106,6 @@ function Nav() {
               Login
             </Link>
           )}
-          <Link className="mobilemenu__link" to="/">
-            <IoMdSearch className="searchmobile" />
-          </Link>
-        </div>
-
-        <div className="ribbon">
-          Use code <span>holidaze</span> for 20% on all bookings
         </div>
       </nav>
     </>
@@ -124,3 +113,15 @@ function Nav() {
 }
 
 export default Nav;
+
+/* 
+<NavLink activeClassName="active" className="searchicon" to="/">
+              <IoMdSearch />
+            </NavLink> 
+            
+            
+            
+<Link className="mobilemenu__link" to="/">
+            <IoMdSearch className="searchmobile" />
+          </Link>
+*/
