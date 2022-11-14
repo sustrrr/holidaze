@@ -68,10 +68,16 @@
 
     @media (max-width: $mobile-width) {
       left: -0.5em;
+      background: none;
+      color: rgb(199, 169, 0);
+
+      a {
+        color: rgb(199, 169, 0);
+      }
     }
 
     a {
-      color: white;
+      color: rgb(255, 217, 0);
     }
   }
 }
