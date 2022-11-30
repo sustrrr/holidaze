@@ -92,7 +92,7 @@ footer {
     &__link {
       width: 50%;
       margin: 0 auto;
-      color: rgb(255, 255, 255);
+      color: getColour(lightergrey);
       display: block;
       padding: 1em 0em;
 

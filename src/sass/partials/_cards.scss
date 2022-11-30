@@ -3,7 +3,7 @@
   margin-bottom: 2em;
   p {
     display: inline;
-    background-color: rgb(214, 154, 56);
+    background-color: getColour(lightorange);
     color: rgb(255, 255, 255);
     padding: 0.3em 0.7em;
     border-radius: 5em 5em 5em 0em;
@@ -64,7 +64,7 @@
 
 .card {
   &:hover {
-    border: 0.1em solid rgb(196, 196, 196);
+    border: 0.1em solid getColour(lightgrey);
   }
 }
 

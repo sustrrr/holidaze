@@ -92,7 +92,7 @@
 .contactmessage {
   margin-bottom: 3em;
   &__card {
-    border: 0.1em solid rgb(144, 144, 144);
+    border: 0.1em solid getColour(greyborder);
     padding: 2em 1em 1em 1em;
     border-radius: 1em;
 

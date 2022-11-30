@@ -22,10 +22,10 @@
     flex: 1;
     padding: 0.5em;
     background-color: white;
-    border: 0.1em solid #ffae5d;
+    border: 0.1em solid getColour(orange);
 
     &:hover {
-      background-color: #ffae5d;
+      border: 0.1em solid getColour(grey);
       font-weight: bold;
       color: black;
     }

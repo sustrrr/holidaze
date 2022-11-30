@@ -1,6 +1,6 @@
 .contact {
   padding-top: 3em;
-  background-color: rgb(255, 255, 255);
+  background-color: getColour(lightergrey);
 }
 
 .contact-box {
@@ -27,7 +27,7 @@
   padding: 3em;
   margin: 0 auto;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
+  background-color: getColour(lightergrey);
 
   .wrapper {
     padding-bottom: 20vh;
@@ -58,7 +58,7 @@
 
     input,
     textarea {
-      background-color: rgb(225, 225, 225);
+      background-color: getColour(lightergrey);
       border: none;
       padding: 0.5em;
       font-size: 0.9em;
