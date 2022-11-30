@@ -44,38 +44,3 @@ function ContactPage() {
 }
 
 export default ContactPage;
-
-//        <HeadingImage style="contact__image" />
-
-/*import Footer from "../layout/Footer";
-import HeadingOne from "../layout/headings/HeadingOne";
-import HeadingTwo from "../layout/headings/HeadingTwo";
-import HeadingImage from "../layout/headings/HeadingImage";
-import ContactForm from "./ContactForm";
-
-import ButtonCategories from "../layout/buttons/ButtonCategories";
-
-function ContactPage() {
-  return (
-    <div className="contact">
-      <div className="ribbon">
-        Use code <span>holidaze</span> for 20% on all bookings
-      </div>
-      <div className="contact">
-        <div className="flex">
-          <HeadingOne titleStyle="h1__big-header" content="Contact us" />
-          <ContactForm />
-        </div>
-        <div class="item-container wrapper">
-          <HeadingTwo>Accomodations by type</HeadingTwo>
-          <ButtonCategories />
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-export default ContactPage;
-
-//        <HeadingImage style="contact__image" />*/

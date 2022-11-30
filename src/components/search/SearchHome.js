@@ -1,4 +1,3 @@
-//search
 import React, { Component } from "react";
 import Select from "react-select";
 import axios from "axios";
@@ -9,8 +8,6 @@ import { withRouter } from "react-router";
 import PropTypes from "prop-types";
 
 import { IoMdSearch } from "react-icons/io";
-
-//IoMdSearch
 
 class SearchHome extends Component {
   constructor(props) {

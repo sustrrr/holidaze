@@ -112,15 +112,3 @@ function Nav() {
 }
 
 export default Nav;
-
-/* 
-<NavLink activeClassName="active" className="searchicon" to="/">
-              <IoMdSearch />
-            </NavLink> 
-            
-            
-            
-<Link className="mobilemenu__link" to="/">
-            <IoMdSearch className="searchmobile" />
-          </Link>
-*/
