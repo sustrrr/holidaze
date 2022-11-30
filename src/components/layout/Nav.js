@@ -41,11 +41,10 @@ function Nav() {
 
           <Logo />
 
-          <div>
+          <div className="last">
             <NavLink activeClassName="active" to="/contact">
               Contact
             </NavLink>
-
             {auth ? (
               <>
                 <NavLink activeClassName="active" to="/dashboard">

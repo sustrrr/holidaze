@@ -11,7 +11,7 @@ export default function MediaDropdown({ register }) {
     async function getMedia() {
       try {
         const response = await http.get("wp/v2/media");
-        console.log("response", response);
+
         setMedia(response.data);
       } catch (error) {
         console.log(error);

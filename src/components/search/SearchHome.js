@@ -61,7 +61,6 @@ class SearchHome extends Component {
   }
 
   render() {
-    console.log(this.state.selectOptions);
     const name = this.state.name;
     return (
       <div className="search" props={this.props}>

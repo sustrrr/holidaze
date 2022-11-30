@@ -18,14 +18,12 @@ const Details = (props) => {
   const [pages, setPages] = useState([]);
 
   const { id } = useParams();
-  console.log(id);
 
   useEffect(() => {
     fetch(BASE_URL + "wc/store/products/" + id)
       .then((res) => res.json())
       .then(
         (data) => {
-          console.log(data);
           setPages(data);
           setIsLoaded(true);
         },
@@ -42,14 +40,14 @@ const Details = (props) => {
     return <div>Loading...</div>;
   }
   if (pages === undefined || pages.length == 0) {
-    console.log("shhsh");
+    console.log("Error");
   }
 
   if (pages) {
     return (
       <>
         <div className="detail">
-          <Carousel interval={null}>
+          <Carousel interval={8000}>
             <Carousel.Item>
               <img
                 className="d-block w-100"
@@ -99,11 +97,14 @@ const Details = (props) => {
         <HeadingTwo>About</HeadingTwo>
         <div className="detailabout">
           <p className="detailabout__about">{pages.description.slice(3, -4)}</p>
-          <p className="detailabout__location">
-            {" "}
-            <IoMdPin className="detailabout__icon" />
-          </p>
-          <p className="detailabout__location">{pages.name} 50, 2030, Bergen</p>
+
+          <div className="detailabout__location">
+            <p>
+              {" "}
+              <IoMdPin className="detailabout__icon" />
+            </p>
+            <p>{pages.name} 50, 2030, Bergen</p>
+          </div>
         </div>
       </>
     );

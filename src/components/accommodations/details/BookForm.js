@@ -52,7 +52,6 @@ export default function BookForm() {
           setPages(data);
           setIsLoaded(true);
           setPrice(data.prices.price); ////this
-          console.log(price);
         },
         (error) => {
           setIsLoaded(true);
@@ -76,8 +75,6 @@ export default function BookForm() {
     bodyFormData.append("adult", data.adult);
     bodyFormData.append("message", data.message);
 
-    console.log(data.message);
-
     axios({
       method: "post",
       url: "https://www.js111ca.one/wp-json/contact-form-7/v1/contact-forms/1111/feedback",
@@ -85,15 +82,11 @@ export default function BookForm() {
       headers: { "Content-Type": "multipart/form-data" },
     })
       .then(function (response) {
-        console.log("mail sent");
         mailSent(false);
-        console.log(response);
         window.scrollTo(0, 0);
       })
       .catch(function (response) {
-        console.log("mail failed");
         mailFailed(false);
-        console.log(response);
       })
       .finally(function (response) {
         setSubmitting(false);
@@ -178,7 +171,7 @@ export default function BookForm() {
               </div>
             </div>
 
-            <div className="datepicker">
+            <div className="datepicker contactform__item">
               <div>
                 <p>Stay from *</p>
                 <DatePicker

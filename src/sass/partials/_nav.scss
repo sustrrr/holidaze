@@ -16,6 +16,14 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+    .last {
+      text-align: right;
+    }
+
+    div {
+      flex: 1;
+    }
+
     @media (max-width: $tablet-width) {
       display: none;
     }
@@ -32,6 +40,7 @@ nav {
     }
 
     .navbrand {
+      cursor: pointer;
       &:hover {
         color: getColour(blue);
       }
@@ -68,6 +77,7 @@ nav {
         font-size: 2.7em;
         line-height: 0em;
         background-color: getColour(primary);
+        color: black !important;
       }
     }
 

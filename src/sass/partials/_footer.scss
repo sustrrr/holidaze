@@ -2,34 +2,36 @@ footer {
   padding: 0em;
   margin: 0em;
   width: 100%;
-  padding-bottom: 5em;
-  background-color: getColour(secondary);
+  //background-color: getColour(secondary);
   .container {
     width: 100%;
   }
 
   .firststrip {
-    width: 100%;
-    background-color: getColour(primary);
+    margin: 0 auto;
+    color: rgb(0, 0, 0);
+    background-color: white;
+
+    /*background-color: getColour(primary);*/
+    border: 2em solid white;
+    border-radius: 3em;
     padding: 1.3em;
+    padding-bottom: 4em;
 
     p {
       font-size: 0.9em;
     }
 
     .h2 {
-      span {
-        background-color: getColour(primary);
-      }
+      color: rgb(63, 70, 88);
     }
 
     &__icon {
-      color: rgb(42, 59, 103);
-      font-size: 3em;
+      color: rgb(66, 66, 66);
+      font-size: 2em;
       margin-bottom: 0.6em;
 
       @media (max-width: $tablet-width) {
-        font-size: 2.7em;
         margin-bottom: 0em;
       }
     }
@@ -43,7 +45,7 @@ footer {
       padding: 0;
       @media (max-width: $tablet-width) {
         flex-direction: column;
-        line-height: 5vw;
+        line-height: 3vw;
       }
       @media (max-width: $tabletPRO-width) {
         width: 100%;
@@ -52,10 +54,14 @@ footer {
     li {
       display: inline-block;
       flex: 0 1 auto;
-      padding: 7vw 0vw;
+      padding: 3vw 0vw;
 
       @media (max-width: $tabletPRO-width) {
         width: 100%;
+      }
+
+      @media (max-width: $tablet-width) {
+        margin-bottom: 3em;
       }
 
       p {
@@ -73,25 +79,29 @@ footer {
 
   .secondstrip {
     text-align: center;
-    color: white;
+    background-color: getColour(secondary);
+    color: rgb(255, 248, 248);
     line-height: 5em;
-    padding: 1.3em;
-
-    p {
-      font-style: italic;
-    }
+    padding: 3em 1.3em;
+    border-radius: 1em 1em 0em 0em;
   }
 
   .sitemap {
+    background-color: getColour(secondary);
+    width: 100%;
+    padding-bottom: 5em;
     text-align: center;
+
     &__link {
-      color: white;
+      width: 50%;
+      margin: 0 auto;
+      color: rgb(255, 255, 255);
       display: block;
-      padding: 1em 10em;
+      padding: 1em 0em;
 
       &:hover {
-        background-color: getColour(grey);
-        color: black;
+        font-weight: bold;
+        color: white;
       }
     }
   }

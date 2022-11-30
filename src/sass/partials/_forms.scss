@@ -21,7 +21,7 @@
   text-align: center;
 
   &__background {
-    background-color: getColour(blue);
+    //background-color: getColour(blue);
     margin-bottom: 1em;
     padding: 0em 1em;
   }
@@ -44,20 +44,6 @@
       height: 14em;
     }
   }
-
-  &__button {
-    background-color: white;
-    color: rgb(0, 0, 0);
-    padding: 1em 4em;
-    border: 0.2em solid getColour(blue);
-    border-radius: 20em;
-
-    &:hover {
-      font-weight: bold;
-      letter-spacing: 0.1em;
-    }
-  }
-
   .form-error {
     color: rgb(255, 99, 99);
     text-align: left;
@@ -67,14 +53,14 @@
 /////
 
 .books {
-  padding-top: 8em;
-
-  @media (max-width: $tablet-width) {
-    padding-top: 5em;
-  }
+  padding-top: 3em;
 }
 
 .bookform {
+  .contactform__item {
+    padding-top: 2em;
+  }
+
   .mailsent {
     margin-bottom: 2em;
   }
@@ -103,7 +89,7 @@
 
   .contactform {
     &__background {
-      width: 60%;
+      width: 80%;
       margin: 0 auto;
       padding: 1em 2em;
 

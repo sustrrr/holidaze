@@ -8,12 +8,8 @@
     font-size: 1em;
 
     @media (max-width: $tablet-width) {
-      font-size: 0.8em;
+      font-size: 0.9em;
       text-align: center;
-    }
-
-    @media (max-width: $mobile-width) {
-      font-size: 0.7em;
     }
   }
 
@@ -30,35 +26,21 @@
 
 .h2 {
   font-family: $font-heading-two; //font
-  padding: 2em 0; //space up down
-  width: 60%;
+  padding: 2em 0em; //space up down
   margin: 0 auto;
-  @media (max-width: $tablet-width) {
-    width: 85%;
-  }
-
-  @media (max-width: $mobile-width) {
-    width: 90%;
-  }
-
-  /*media
-    width: 90%;*/
+  width: 100%;
 
   h2 {
     text-align: center;
-    border-bottom: 1px solid #000;
     line-height: 0.1em;
     margin: 0 auto;
-    font-size: 0.7em; //size
-
-    @media (max-width: $tablet-width) {
-      font-size: 0.6em;
-    }
+    font-size: 0.9em; //size
+    padding-bottom: 1em;
   }
 
   span {
     background: #fff;
-    padding: 0 3em;
+    padding: 0em 0em;
 
     @media (max-width: $mobile-width) {
       padding: 0 1em;
@@ -68,8 +50,13 @@
 
 p {
   font-family: $font-primary;
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 3.7vh;
+
+  @media (max-width: $tabletPRO-width) {
+    font-size: 1em;
+    line-height: 4.2vh;
+  }
 }
 
 a {

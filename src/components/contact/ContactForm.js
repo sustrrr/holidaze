@@ -42,8 +42,6 @@ export default function AddPost() {
     bodyFormData.append("email", data.email);
     bodyFormData.append("message", data.message);
 
-    console.log(data.message);
-
     axios({
       method: "post",
       url: "https://www.js111ca.one/wp-json/contact-form-7/v1/contact-forms/870/feedback",
@@ -51,15 +49,12 @@ export default function AddPost() {
       headers: { "Content-Type": "multipart/form-data" },
     })
       .then(function (response) {
-        console.log("mail sent");
         mailSent(false);
-        console.log(response);
+
         window.scrollTo(0, 0);
       })
       .catch(function (response) {
-        console.log("mail failed");
         mailFailed(false);
-        console.log(response);
       })
       .finally(function (response) {
         setSubmitting(false);

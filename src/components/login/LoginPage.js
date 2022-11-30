@@ -12,14 +12,16 @@ export default function LoginPage() {
         <div className="ribbon">
           Use code <span>holidaze</span> for 20% on all bookings
         </div>
-        <HeadingImage style="contact__image" />
-        <div class="wrapper contact">
-          <div class="item-container-first flex">
-            <HeadingOne titleStyle="h1__big-header" content="Login" />
-            <LoginForm />
-          </div>
-          <div class="item-container">
-            <HeadingTwo>test heading two</HeadingTwo>
+
+        <div className="contact-box">
+          <div className="contact-flex">
+            <HeadingImage style="contact__image" />
+            <div class="wrapper contact">
+              <div class="item-container-first flex">
+                <HeadingOne titleStyle="h1__big-header" content="Login" />
+                <LoginForm />
+              </div>
+            </div>
           </div>
         </div>
         <Footer />

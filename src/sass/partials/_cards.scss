@@ -21,13 +21,21 @@
 }
 
 .tags {
-  font-style: italic;
   line-height: 2em;
+  font-size: 0.9em; //hereeee size
 
-  li {
-    @media (max-width: $mobileXL-width) {
-      ////this flex column
-      display: inline;
+  @media (max-width: $tabletPRO-width) {
+    font-size: 0.9em;
+  }
+
+  @media (max-width: $tabletSmall-width) {
+    margin: 2em 0em;
+    font-size: 1em;
+
+    li {
+      margin: 1em;
+      display: inline-block;
+      overflow-wrap: break-word;
     }
 
     &__icon {
@@ -42,12 +50,13 @@
   padding: 1.2em 1.7em;
   border: none;
   border-radius: 1em;
+  font-size: 0.9em;
 
   @media (max-width: $tablet-width) {
     padding: 0.8em 1em;
   }
 
-  @media (max-width: $mobileXL-width) {
+  @media (max-width: $tabletSmall-width) {
     ////this flex column
     padding: 0.8em 2em;
   }
@@ -60,12 +69,30 @@
 }
 
 .accomodations {
+  .cardbutton {
+    width: 100%;
+  }
+  h3 {
+    margin-top: 0.5em;
+    font-size: 1.2em;
+    color: rgb(63, 70, 88);
+    font-weight: bold;
+    padding-bottom: 0.3em;
+  }
   width: 100%;
   @include containerflex;
   flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
     padding: 2vw;
+  }
+
+  @media (max-width: $tabletSmall-width) {
+    width: 80%;
+  }
+
+  @media (max-width: $mobileXL-width) {
+    width: 100%;
   }
 
   .card {
@@ -80,10 +107,10 @@
 
     @media (max-width: $tablet-width) {
       //too small
-      font-size: 0.7em;
+      font-size: 0.9em;
     }
 
-    @media (max-width: $mobileXL-width) {
+    @media (max-width: $tabletSmall-width) {
       ////this flex column
       flex-direction: column;
       margin-top: 4em;
@@ -97,13 +124,13 @@
         font-size: 1.2em;
       }
 
-      @media (max-width: $mobileXL-width) {
+      @media (max-width: $tabletSmall-width) {
         ////this flex column
         font-size: 1.7em;
       }
     }
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $tabletSmall-width) {
       margin-bottom: 1em;
     }
 
@@ -116,7 +143,7 @@
         width: 40%;
       }
 
-      @media (max-width: $mobileXL-width) {
+      @media (max-width: $tabletSmall-width) {
         ////this flex column
         width: 100%;
         border-radius: 1em 1em 0em 0em;
@@ -129,18 +156,10 @@
     text-align: left;
     flex: 3;
 
-    @media (max-width: $mobileXL-width) {
+    @media (max-width: $tabletSmall-width) {
       ////this flex column
       text-align: center;
       margin: 1em;
-
-      &__tags {
-        font-size: 1.1em;
-
-        li {
-          margin: 1em;
-        }
-      }
     }
 
     &__reviews {
@@ -156,7 +175,7 @@
     align-self: flex-end;
     margin: 2em;
 
-    @media (max-width: $mobileXL-width) {
+    @media (max-width: $tabletSmall-width) {
       ////this flex column
       margin: 0em 0em 2em 0em;
       align-self: center;
@@ -182,49 +201,77 @@
 
 ///// detail page
 
-.detailtext {
-  flex: 1;
-  @extend .cardbody-one;
-  @extend .cardbody-two;
-
-  h1 {
-    font-size: 0.8em;
-    @media (max-width: $tablet-width) {
+.detailpage {
+  @media (max-width: $mobile-width) {
+    p {
       font-size: 0.9em;
     }
   }
+  .detail {
+    .detailtext {
+      @media (max-width: $tabletPRO-width) {
+        padding-top: 1em;
+        width: 90%;
+        margin: 0 auto;
+      }
+      flex: 1;
+      @extend .cardbody-one;
+      @extend .cardbody-two;
 
-  &__reviews {
-    @extend .reviews;
-  }
+      h1 {
+        text-align: left;
+        font-size: 0.8em;
+        @media (max-width: $tabletPRO-width) {
+          text-align: center;
+          font-size: 0.9em;
+        }
+      }
 
-  &__tags {
-    @extend .tags;
+      &__reviews {
+        @extend .reviews;
+      }
 
-    li {
-      line-height: 3em;
-      @media (max-width: $tablet-width) {
-        display: inline-block;
-        margin: 1em;
+      &__tags {
+        @extend .tags;
+
+        @media (max-width: $tabletPRO-width) {
+          padding-top: 3em;
+        }
+
+        li {
+          line-height: 3em;
+          @media (max-width: $tabletPRO-width) {
+            display: inline-block;
+            margin: 1em;
+          }
+        }
+      }
+
+      &__price {
+        span {
+          font-size: 1.1em;
+          font-weight: bold;
+        }
+      }
+
+      &__booknow {
+        margin: 3em 0em;
+        display: inline;
+        @extend .cardbutton;
+        text-align: center;
+        padding: 1em 3em;
+
+        &:hover {
+          font-weight: bold;
+          letter-spacing: 0.1em;
+        }
       }
     }
   }
 
-  &__price {
-    span {
-      font-size: 1.1em;
-      font-weight: bold;
-    }
-  }
-
-  &__booknow {
-    margin: 3em 0em;
-    @extend .cardbutton;
-    padding: 0.8em 3em;
-
-    &:hover {
-      font-weight: bold;
-      letter-spacing: 0.1em;
+  .detailabout {
+    &__location {
+      margin-top: 10em;
     }
   }
 }

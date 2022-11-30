@@ -24,7 +24,6 @@ const GetBB = () => {
         }
       );
   }, []);
-  console.log(pages);
 
   if (error) {
     return <div>Error: {error.message}</div>;
