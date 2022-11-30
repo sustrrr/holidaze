@@ -35,8 +35,7 @@
 ////search
 .search {
   display: flex;
-  justify-content: center; //this one on cards
-
+  justify-content: center;
   &__input {
     width: 90%;
     font-style: italic;
@@ -87,45 +86,3 @@ select {
     height: 10em;
   }
 }
-
-/*
-
-  ////search
-  .search {
-    display: flex;
-    justify-content: center; //this one on cards
-
-    &__input {
-      width: 90%;
-      font-style: italic;
-    }
-    
-    .css-6j8wv5-Input {
-        input {
-            height: 2.3em;
-        }
-    }
-
-    &__icon {
-      position: relative;
-      left: -1.2em;
-      bottom: 0.2em;
-      font-size: 2.8em;
-      align-self: center;
-
-      @media (max-width: $mobile-width) {
-        left: -1.1em;
-    }
-      a {
-      color: getColour(accent);
-    }
-    }
-  }
-
-
-  select {
-    input {
-    padding: 10em;
-}
-  }
-*/
