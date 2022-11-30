@@ -24,7 +24,7 @@ footer {
     }
 
     &__icon {
-      color: rgb(66, 66, 66);
+      color: getColour(darkergrey);
       font-size: 2em;
       margin-bottom: 0.6em;
 
