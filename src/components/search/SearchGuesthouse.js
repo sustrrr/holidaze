@@ -27,7 +27,7 @@ class SearchGuesthouse extends Component {
 
   async getOptions() {
     const res = await axios.get(
-      BASE_URL + "wc/store/products?category=29?per_page=27"
+      BASE_URL + "wc/store/products?category=17?per_page=27"
     );
     const data = res.data;
 
@@ -54,7 +54,7 @@ class SearchGuesthouse extends Component {
         this.props.history.push(`./detail/${this.state.id}`);
         e.target.value = "";
       } else {
-        this.props.history.push(`./hotels`);
+        this.props.history.push(`./guesthouse`);
       }
     }
   }

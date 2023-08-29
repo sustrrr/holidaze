@@ -16,7 +16,7 @@ const GetBB = () => {
       .then(
         (data) => {
           setIsLoaded(true);
-          setPages(data.filter((page) => page.categories[0].id === 30));
+          setPages(data.filter((page) => page.categories[0].id === 18));
         },
         (error) => {
           setIsLoaded(true);
@@ -54,7 +54,7 @@ const GetBB = () => {
                 <p className="cardbody-two__price">
                   Starts at: <span>{page.prices.price}$</span>
                 </p>
-                <Button buttonstyle="cardbody-two__booknow">View more</Button>
+                <Button buttonstyle="cardbody-two__booknow">Book now</Button>
               </div>
             </div>
           </Link>
@@ -64,3 +64,31 @@ const GetBB = () => {
   }
 };
 export default GetBB;
+
+/*
+<Link to={`../detail/${page.id}`} key={page.id}>
+            <div className="card gap">
+              <img src={page.images[0].src} alt={page.images[0].alt} />
+              <div className="cardbody-one">
+                <h3>{page.name}</h3>
+                <div class="cardbody-one__reviews">
+                  <span>rated</span> <p>{page.average_rating} / 5.00</p>
+                </div>
+                <ul className="cardbody-one__tags">
+                  {page.tags.map((tag) => (
+                    <li key={tag.name}>
+                      <IoIosCheckmark class="cardbody-one__icon" />
+                      {tag.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="cardbody-two">
+                <p className="cardbody-two__price">
+                  Starts at: <span>{page.prices.price}$</span>
+                </p>
+                <Button buttonstyle="cardbody-two__booknow">View more</Button>
+              </div>
+            </div>
+          </Link>
+          */

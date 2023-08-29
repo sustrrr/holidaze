@@ -32,7 +32,7 @@ function Nav() {
               Hotels
             </NavLink>
             <NavLink activeClassName="active" to="/bb">
-              BB
+              B&B
             </NavLink>
             <NavLink activeClassName="active" to="/guesthouse">
               Guesthouse

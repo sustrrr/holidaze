@@ -14,20 +14,14 @@ import { BASE_URL } from "../../../constants/api";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+import Stored from "./bookingStored";
+
 const schema = yup.object().shape({
   title: yup.string().required("Name is required"),
   email: yup
     .string()
     .required("Email is required")
     .email("Please enter a valid email address"),
-  adult: yup
-    .number()
-    .required("Number is required")
-    .typeError("Must be a number"),
-  children: yup
-    .number()
-    .required("Number is required")
-    .typeError("Must be a number"),
 });
 
 export default function BookForm() {
@@ -72,12 +66,11 @@ export default function BookForm() {
     bodyFormData.append("hotelname", data.hotelname);
     bodyFormData.append("title", data.title);
     bodyFormData.append("email", data.email);
-    bodyFormData.append("adult", data.adult);
     bodyFormData.append("message", data.message);
 
     axios({
       method: "post",
-      url: "https://www.js111ca.one/wp-json/contact-form-7/v1/contact-forms/1111/feedback",
+      url: "https://devsusi.no/holidaze/wp-json/contact-form-7/v1/contact-forms/18/feedback",
       data: bodyFormData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -107,7 +100,7 @@ export default function BookForm() {
           </div>
           <div className="contactform__background">
             <div className="contactform__item hideform">
-              <label for="hotelname">Hotelname</label>
+              <label htmlFor="hotelname">Hotelname</label>
               <textarea
                 id="hotelname"
                 name="hotelname"
@@ -122,7 +115,7 @@ export default function BookForm() {
             </div>
 
             <div className="contactform__item">
-              <label for="title">Name *</label>
+              <label htmlFor="title">Name *</label>
               <input
                 id="title"
                 name="title"
@@ -133,7 +126,7 @@ export default function BookForm() {
             </div>
 
             <div className="contactform__item">
-              <label for="title">Email *</label>
+              <label htmlFor="title">Email *</label>
               <input
                 id="email"
                 name="email"
@@ -143,58 +136,10 @@ export default function BookForm() {
               {errors.email && <FormError>{errors.email.message}</FormError>}
             </div>
 
-            <div className="datepicker">
-              <div className="contactform__item">
-                <label for="number">Number of adults *</label>
-                <input
-                  id="adult"
-                  type="number"
-                  name="adult"
-                  placeholder="Ex. 1"
-                  ref={register}
-                />
-                {errors.adult && <FormError>{errors.adult.message}</FormError>}
-              </div>
-
-              <div className="contactform__item">
-                <label for="number">Number of children *</label>
-                <input
-                  id="children"
-                  name="children"
-                  type="number"
-                  placeholder="Ex. 1"
-                  ref={register}
-                />
-                {errors.children && (
-                  <FormError>{errors.children.message}</FormError>
-                )}
-              </div>
-            </div>
-
-            <div className="datepicker contactform__item">
-              <div>
-                <p>Stay from *</p>
-                <DatePicker
-                  class="test"
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                  id="datefrom"
-                  name="datefrom"
-                  ref={register}
-                />
-              </div>
-              <div>
-                <p>Stay to *</p>
-                <DatePicker
-                  class="test"
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                />
-              </div>
-            </div>
+            <Stored className="shshsjj" />
 
             <div className="contactform__item">
-              <label for="mwssage">Message (optional)</label>
+              <label htmlFor="mwssage">Message (optional)</label>
               <textarea
                 id="message"
                 name="message"
@@ -212,3 +157,52 @@ export default function BookForm() {
     </div>
   );
 }
+
+/*
+<div className="datepicker contactform__item">
+              <div>
+                <p>Stay from *</p>
+                <DatePicker
+                  className="test"
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  id="datefrom"
+                  name="datefrom"
+                  ref={register}
+                />
+              </div>
+              <div>
+                <p>Stay to *</p>
+                <DatePicker
+                  className="test"
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                />
+              </div>
+            </div>
+            */
+
+//"https://www.js111ca.one/wp-json/contact-form-7/v1/contact-forms/1111/feedback"
+
+/*
+import { useState, useEffect } from "react";
+
+function Stored() {
+  const [user, setItems] = useState([]);
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    if (user) {
+      setItems(user);
+    }
+  }, []);
+
+  return (
+    <>
+      <p>{user.name}</p>
+    </>
+  );
+}
+
+export default Stored;
+*/

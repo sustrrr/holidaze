@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import FormError from "../common/FormError";
+import FormError from "../../components/common/FormError";
 import Button from "../layout/Button";
 import axios from "axios";
 
@@ -44,7 +44,7 @@ export default function AddPost() {
 
     axios({
       method: "post",
-      url: "https://www.js111ca.one/wp-json/contact-form-7/v1/contact-forms/870/feedback",
+      url: "https://devsusi.no/holidaze/wp-json/contact-form-7/v1/contact-forms/18/feedback",
       data: bodyFormData,
       headers: { "Content-Type": "multipart/form-data" },
     })
@@ -71,7 +71,7 @@ export default function AddPost() {
         </div>
         <div className="contactform__background">
           <div className="contactform__item">
-            <label for="title">Name *</label>
+            <label htmlFor="title">Name *</label>
             <input
               id="title"
               name="title"
@@ -82,13 +82,13 @@ export default function AddPost() {
           </div>
 
           <div className="contactform__item">
-            <label for="title">Email *</label>
+            <label htmlFor="title">Email *</label>
             <input id="email" name="email" placeholder="Email" ref={register} />
             {errors.email && <FormError>{errors.email.message}</FormError>}
           </div>
 
           <div className="contactform__item">
-            <label for="title">Message *</label>
+            <label htmlFor="title">Message *</label>
             <textarea
               id="message"
               name="message"
@@ -106,3 +106,5 @@ export default function AddPost() {
     </form>
   );
 }
+
+//https://www.js111ca.one/wp-json/contact-form-7/v1/contact-forms/870/feedback

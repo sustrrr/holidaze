@@ -2,7 +2,7 @@ import { useContext } from "react";
 import axios from "axios";
 import AuthContext from "../context/AuthContext";
 
-const url = "https://www.js111ca.one/wp-json/";
+const url = "https://devsusi.no/holidaze/wp-json/";
 
 export default function useAxios() {
   const [auth] = useContext(AuthContext);

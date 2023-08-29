@@ -7,6 +7,8 @@ import FeaturedHotel from "../featured/FeaturedHotel";
 import FeaturedGuesthouse from "../featured/FeaturedGuesthouse";
 import FeaturedBB from "../featured/FeaturedBB";
 
+import Stored from "./bookingStored";
+
 function DetailPage() {
   return (
     <>
@@ -15,13 +17,13 @@ function DetailPage() {
           Use code <span>holidaze</span> for 20% on all bookings
         </div>
         <div className="wrapper wrapper_detail">
-          <div class="item-container">
+          <div className="item-container">
             <Details />
           </div>
         </div>
-        <div class="item-container wrapper">
+        <div className="item-container wrapper">
           <HeadingTwo>Most popular bookings</HeadingTwo>
-          <div class="accomodations">
+          <div className="accomodations">
             <FeaturedHotel />
             <FeaturedBB />
             <FeaturedGuesthouse />

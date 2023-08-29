@@ -27,7 +27,7 @@ class SearchHotel extends Component {
 
   async getOptions() {
     const res = await axios.get(
-      BASE_URL + "wc/store/products?category=28?per_page=27"
+      BASE_URL + "wc/store/products?category=19?per_page=27"
     );
     const data = res.data;
 

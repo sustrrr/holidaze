@@ -24,6 +24,7 @@ body {
   ///remove this or either use wrapper or container
   flex: 1 0 auto;
   padding-top: 1em;
+
   width: 85%;
   margin: 0 auto;
 
@@ -32,7 +33,11 @@ body {
   }
 
   @media (max-width: $tablet-width) {
-    padding-top: 4.5em;
+    padding-top: 3.5em;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 2em;
   }
   padding-bottom: 40vh;
 }
@@ -59,10 +64,10 @@ body {
 
 .item-container-first {
   padding-top: 2em;
-  padding-bottom: 4em;
+  padding-bottom: 1.3em;
   @media (max-width: $tablet-width) {
     padding-top: 1.5em;
-    padding-bottom: 3em;
+    padding-bottom: 1.3em;
   }
 }
 

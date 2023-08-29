@@ -12,7 +12,10 @@
       padding-bottom: 0em;
     }
     &__input {
-      font-style: italic;
+      font-style: normal;
+      font-family: "inter";
+      color: black;
+      font-size: 0.9em;
       width: 100%;
       @media (max-width: $tabletPRO-width) {
         width: 100%;
@@ -74,5 +77,3 @@
 
   @include search;
 }
-
-/////

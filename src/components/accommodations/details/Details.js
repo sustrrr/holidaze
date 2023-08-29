@@ -12,6 +12,8 @@ import Button from "../../layout/Button";
 
 import { IoIosCheckmark, IoMdPin } from "react-icons/io";
 
+import Stored from "./bookingStored";
+
 const Details = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -80,22 +82,21 @@ const Details = (props) => {
               Starts at: <span>{pages.prices.price}$</span>
             </p>
 
-            <Link to={`/book/${pages.id}`} key={pages.id}>
-              <Button buttonstyle="detailtext__booknow">Book now</Button>{" "}
-            </Link>
-
-            <ul class="detailtext__tags">
+            <ul className="detailtext__tags">
               {pages.tags.map((tag) => (
                 <li key={tag.name}>
-                  <IoIosCheckmark class="cardbody-one__icon" />
+                  <IoIosCheckmark className="cardbody-one__icon" />
                   {tag.name}
                 </li>
               ))}
             </ul>
+            <Link to={`/book/${pages.id}`} key={pages.id}>
+              <Button buttonstyle="detailtext__booknow">Book now</Button>{" "}
+            </Link>
           </div>
         </div>
-        <HeadingTwo>About</HeadingTwo>
         <div className="detailabout">
+          <HeadingTwo>About</HeadingTwo>
           <p className="detailabout__about">{pages.description.slice(3, -4)}</p>
 
           <div className="detailabout__location">
@@ -111,6 +112,19 @@ const Details = (props) => {
   }
 };
 export default Details;
+
+/*
+        <div className="sjfk">
+          <div className="storedcontainer">
+            <Stored />
+          </div>
+          <div className="buttonnn">
+            <Link to={`/book/${pages.id}`} key={pages.id}>
+              <Button buttonstyle="detailtext__booknow">Book now</Button>{" "}
+            </Link>
+          </div>
+        </div>
+        */
 
 /*
 

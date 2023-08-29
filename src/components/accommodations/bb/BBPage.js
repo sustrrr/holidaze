@@ -14,12 +14,12 @@ function BBPage() {
           Use code <span>holidaze</span> for 20% on all bookings
         </div>
         <HeadingImage style="bb__image" />
-        <div class="wrapper">
+        <div className="wrapper">
           <div className="item-container-first">
-            <HeadingOne titleStyle="h1__big-header" content="B&B" />
+            <HeadingOne titleStyle="h1__big-header" content="Bed & breakfast" />
             <SearchBB />
           </div>
-          <div class="accomodations">
+          <div className="accomodations">
             <GetBB />
           </div>
         </div>

@@ -1,6 +1,7 @@
 .contact {
   padding-top: 3em;
-  background-color: getColour(lightergrey);
+  background-color: white;
+  //background-color: getColour(lightergrey);
 }
 
 .contact-box {
@@ -17,7 +18,7 @@
   }
 
   @media (max-width: $mobileXL-width) {
-    padding: 0em 3em;
+    padding: 0em 2em;
   }
 }
 
@@ -27,7 +28,11 @@
   padding: 3em;
   margin: 0 auto;
   flex-direction: column;
-  background-color: getColour(lightergrey);
+  //background-color: getColour(lightergrey);
+  background-color: white;
+
+  background-color: rgb(255, 255, 255);
+  border: 0.1em solid #dfdfdf23;
 
   .wrapper {
     padding-bottom: 20vh;
@@ -62,6 +67,8 @@
       border: none;
       padding: 0.5em;
       font-size: 0.9em;
+
+      border: 0.2em solid #dfdfdf23;
     }
 
     label {

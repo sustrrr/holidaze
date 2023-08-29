@@ -1,34 +1,79 @@
-.hero {
+.glass {
   background-image: url(/img/frontpicture.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
   width: 100%;
-  border-radius: 0em 0em 1em 1em;
   margin: 0 auto;
-  padding: 15em 15em;
+  border-radius: 0em 0em 0em 0em;
+}
+
+.hero {
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 0px solid rgba(255, 255, 255, 0.118);
+
+  border-radius: 0em 0em 0em 0em;
+
+  margin: 0 auto;
+  padding: 14em 11em;
+
+  @media (max-width: 1230px) {
+    padding: 9em 7em;
+  }
+
+  @media (max-width: $desktopSmall-width) {
+    padding: 9em 4em;
+  }
 
   @media (max-width: $tabletPRO-width) {
-    padding: 15em 7em;
+    padding: 9em 2em;
   }
 
   @media (max-width: $tablet-width) {
-    padding: 15em 2em;
+    padding: 5em 0em;
+  }
+
+  @media (max-width: 800px) {
+    padding: 5em 9em;
+  }
+
+  @media (max-width: 600px) {
+    padding: 5em 2em;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 15em 1em;
+    padding: 5em 2em;
     outline-offset: -10px;
   }
 
+  @media (max-width: 385px) {
+    padding: 2em 1em;
+  }
+
   .h1 {
+    /*
+    text-shadow: 1px 1px 0 rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255),
+      1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255),
+      3px 3px 5px #4e4e4e;*/
+
     h1 {
       text-align: center;
-      font-size: 0.7em;
-      color: rgb(255, 255, 255);
+      font-family: $font-heading-one;
+      font-size: 0.6em;
+      color: #ffffff;
+      font-weight: bold;
     }
-    margin-bottom: 1em;
+    margin-bottom: 0em;
+    padding: 1em 0em;
+
+    @media (max-width: 400px) {
+      font-size: 2em;
+    }
   }
 }
 

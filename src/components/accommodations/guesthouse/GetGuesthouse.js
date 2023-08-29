@@ -17,7 +17,7 @@ const GetGuesthouse = () => {
       .then(
         (data) => {
           setIsLoaded(true);
-          setPages(data.filter((page) => page.categories[0].id === 29));
+          setPages(data.filter((page) => page.categories[0].id === 17));
         },
         (error) => {
           setIsLoaded(true);
@@ -36,7 +36,7 @@ const GetGuesthouse = () => {
         {pages.map((page) => (
           <Link to={`../detail/${page.id}`} key={page.id}>
             <div className="card">
-              <img src={page.images[0].src} alt={page.images[0].alt} />
+              <img src={page.images[0].src} alt={page.images[1].alt} />
               <div className="cardbody-one">
                 <h3>{page.name}</h3>
                 <div class="cardbody-one__reviews">
@@ -55,7 +55,7 @@ const GetGuesthouse = () => {
                 <p className="cardbody-two__price">
                   Starts at: <span>{page.prices.price}$</span>
                 </p>
-                <Button buttonstyle="cardbody-two__booknow">View more</Button>
+                <Button buttonstyle="cardbody-two__booknow">Book now</Button>
               </div>
             </div>
           </Link>

@@ -16,7 +16,7 @@ const GetHotel = () => {
       .then(
         (data) => {
           setIsLoaded(true);
-          setPages(data.filter((page) => page.categories[0].id === 28));
+          setPages(data.filter((page) => page.categories[0].id === 19));
         },
         (error) => {
           setIsLoaded(true);
@@ -54,7 +54,7 @@ const GetHotel = () => {
                 <p className="cardbody-two__price">
                   Starts at: <span>{page.prices.price}$</span>
                 </p>
-                <Button buttonstyle="cardbody-two__booknow">View more</Button>
+                <Button buttonstyle="cardbody-two__booknow">Book now</Button>
               </div>
             </div>
           </Link>

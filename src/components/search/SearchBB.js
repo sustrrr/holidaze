@@ -27,7 +27,7 @@ class SearchBB extends Component {
 
   async getOptions() {
     const res = await axios.get(
-      BASE_URL + "wc/store/products?category=30?per_page=27"
+      BASE_URL + "wc/store/products?category=18?per_page=27"
     );
     const data = res.data;
 
@@ -54,7 +54,7 @@ class SearchBB extends Component {
         this.props.history.push(`./detail/${this.state.id}`);
         e.target.value = "";
       } else {
-        this.props.history.push(`./hotels`);
+        this.props.history.push(`./bb`);
       }
     }
   }

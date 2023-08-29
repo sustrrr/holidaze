@@ -21,7 +21,7 @@
 }
 
 .tags {
-  line-height: 2em;
+  line-height: 1.4em;
   font-size: 0.9em;
 
   @media (max-width: $tabletPRO-width) {
@@ -29,11 +29,13 @@
   }
 
   @media (max-width: $tabletSmall-width) {
-    margin: 2em 0em;
+    margin: 1em 0em;
     font-size: 1em;
+    line-height: 1em;
 
     li {
-      margin: 1em;
+      margin: 0.7em;
+      margin-bottom: 0.5em;
       display: inline-block;
       overflow-wrap: break-word;
     }
@@ -63,6 +65,10 @@
 }
 
 .card {
+  background-color: rgb(247, 247, 247);
+
+  border: 0.1em solid rgba(0, 0, 0, 0);
+  border: 0.1em solid #dfdfdf23;
   &:hover {
     border: 0.1em solid getColour(lightgrey);
   }
@@ -111,7 +117,7 @@
 
     @media (max-width: $tabletSmall-width) {
       flex-direction: column;
-      margin-top: 4em;
+      margin-top: 0em;
     }
 
     h3 {
@@ -202,7 +208,13 @@
     }
   }
   .detail {
+    background-color: rgb(247, 247, 247);
+
+    border: 0.1em solid rgba(0, 0, 0, 0);
+    border: 0.1em solid #dfdfdf23;
+    padding-bottom: 0em;
     .detailtext {
+      padding-top: 1em;
       @media (max-width: $tabletPRO-width) {
         padding-top: 1em;
         width: 90%;
@@ -215,9 +227,10 @@
       h1 {
         text-align: left;
         font-size: 0.8em;
+
         @media (max-width: $tabletPRO-width) {
           text-align: center;
-          font-size: 0.9em;
+          font-size: 0.8em;
         }
       }
 
@@ -229,14 +242,16 @@
         @extend .tags;
 
         @media (max-width: $tabletPRO-width) {
-          padding-top: 3em;
+          padding-top: 1em;
         }
 
         li {
-          line-height: 3em;
+          line-height: 2em;
           @media (max-width: $tabletPRO-width) {
             display: inline-block;
-            margin: 1em;
+            margin: 0.8em;
+            margin-bottom: 0.1em;
+            line-height: 0em;
           }
         }
       }
@@ -249,11 +264,11 @@
       }
 
       &__booknow {
-        margin: 3em 0em;
+        margin: 2em 0em;
         display: inline;
         @extend .cardbutton;
         text-align: center;
-        padding: 1em 3em;
+        padding: 1em 2.4em;
 
         &:hover {
           font-weight: bold;
@@ -265,7 +280,7 @@
 
   .detailabout {
     &__location {
-      margin-top: 10em;
+      margin-top: 5em;
     }
   }
 }

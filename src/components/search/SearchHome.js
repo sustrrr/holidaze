@@ -9,6 +9,8 @@ import PropTypes from "prop-types";
 
 import { IoMdSearch } from "react-icons/io";
 
+import { useState } from "react";
+
 class SearchHome extends Component {
   constructor(props) {
     super(props);
@@ -52,7 +54,7 @@ class SearchHome extends Component {
         this.props.history.push(`./detail/${this.state.id}`);
         e.target.value = "";
       } else {
-        this.props.history.push(`./hotels`);
+        this.props.history.push(`./`);
       }
     }
   }
